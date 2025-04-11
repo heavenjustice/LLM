@@ -1,11 +1,13 @@
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+sys.path.append("notebook/C3 搭建知识库") # 将父目录放入系统路径中
 import streamlit as st
 from zhipuai_llm import ZhipuaiLLM
 import os
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnableBranch, RunnablePassthrough
-import sys
-sys.path.append("notebook/C3 搭建知识库") # 将父目录放入系统路径中
 from langchain_community.embeddings import ZhipuAIEmbeddings
 from langchain_community.vectorstores import Chroma
 
