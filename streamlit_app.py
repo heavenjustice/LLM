@@ -21,7 +21,7 @@ def get_retriever():
         model="embedding-3",
     )
     # 向量数据库持久化路径
-    persist_directory = '../../data_base/vector_db/chroma'
+    persist_directory = 'data_base/vector_db/chroma'
     # 加载数据库
     vectordb = Chroma(
         persist_directory=persist_directory,
