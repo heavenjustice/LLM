@@ -1,5 +1,4 @@
 import streamlit as st
-from langchain_openai import ChatOpenAI
 from zhipuai_llm import ZhipuaiLLM
 import os
 from langchain_core.output_parsers import StrOutputParser
